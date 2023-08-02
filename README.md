@@ -2,7 +2,9 @@
 
 - O que é o Node.js?
 - Para que serve o NPM?
-- Para que serve o Nodemonc
+- Para que serve o Nodemon
+- O que é uma API?
+- Para que serve o Framework Express?
 
 # Comandos
 
@@ -15,3 +17,6 @@
 - git config --global user.name "João Bettin" (Configura o nome do usuário para commitar mudanças)
 - git config --global user.email "jbettinsouza@gmail.com"
 - git config --list
+
+- git init
+- git remot add origin [url do repositório]
