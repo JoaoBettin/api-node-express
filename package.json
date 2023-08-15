@@ -1,26 +1,24 @@
 {
   "name": "api-node-express",
   "version": "1.0.0",
-  "description": "api node com Express",
-  "main": "server.js",
+  "description": "API Rest com NodeJS e Express",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "iniciar": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "api",
     "javascript",
-    "node",
     "express",
-    "restfull"
+    "node",
+    "restful"
   ],
-  "author": "João Bettin",
+  "author": "Gian Lucca",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
   }
 }
