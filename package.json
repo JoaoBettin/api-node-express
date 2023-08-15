@@ -15,7 +15,7 @@
     "node",
     "restful"
   ],
-  "author": "Gian Lucca",
+  "author": "João Bettin",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
