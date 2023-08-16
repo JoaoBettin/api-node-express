@@ -1,11 +1,20 @@
-const createUser =  (req, res)=>{
-    //Create
-    const dados = req.body
+import user from '../../models/userModels.js'
 
-    res.json({
-        message: "Usuário criado com sucesso",
-        dados: dados
-    })
+const createUser =  async (req, res)=>{
+    try{
+        const user = req.body
+        const res = await user.create(user)
+        console.log(res)
+        const [result] = res
+        if (result.affectedRows === 1) {
+            res.status(201).json{(message: 'User Created'),
+        
+        }
+        }
+    } catch{
+        console.log(err)
+        res.status(500).json({message: 'Server Error'})
+    }
 }
 
 export default createUser
