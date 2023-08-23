@@ -1,8 +1,8 @@
-import user from '../../models/userModel.js'
+import product from '../../models/productModel.js'
 
-const getUser = async (req, res)=>{
+const getProduct = async (req, res)=>{
     try {
-        const [rows, fields] = await user.get(req.body.id)
+        const [rows, fields] = await product.get(req.body.id)
         if(rows.length === 0){
             res.status(404).json({message: 'User not found.'})
         }else {
@@ -15,4 +15,4 @@ const getUser = async (req, res)=>{
     }
 }
 
-export default getUser
+export default getProduct

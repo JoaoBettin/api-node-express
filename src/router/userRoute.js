@@ -5,6 +5,7 @@ import createUser from '../controllers/user/createUser.js'
 import updateUser from '../controllers/user/updateUser.js'
 import deleteUser from '../controllers/user/deleteUser.js'
 
+
 const router = express.Router()
 
 router.get('/', getUser)

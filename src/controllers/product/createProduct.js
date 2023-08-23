@@ -1,10 +1,10 @@
-import user from '../../models/userModel.js'
+import product from '../../models/productModel.js'
 
-const createUser = async (req, res) => {
+const createProduct = async (req, res) => {
     try{
-        const [result] = await user.create(req.body)
+        const [result] = await product.create(req.body)
         if(result.affectedRows === 1) {
-            res.status(201).json({message: 'User Created',
+            res.status(201).json({message: 'Product Created',
                 user:{
                     id: result.insertId,
                     ...req.body
@@ -17,4 +17,4 @@ const createUser = async (req, res) => {
     }
 }
 
-export default createUser
+export default createProduct

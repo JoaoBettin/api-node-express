@@ -1,9 +1,9 @@
-import user from '../../models/userModel.js'
+import product from '../../models/productModel.js'
 
-const deleteUser = async (req, res)=>{
+const deleteProduct = async (req, res)=>{
     try{
         const id = req.body.id
-        const [result] = await user.remove(id)
+        const [result] = await product.remove(id)
         if(result.affectedRows === 1) {
             res.status(200).json({message: `User id: ${id} Deleted Successfully!`})
         } else{
@@ -15,4 +15,4 @@ const deleteUser = async (req, res)=>{
     }
 }
 
-export default deleteUser
+export default deleteProduct

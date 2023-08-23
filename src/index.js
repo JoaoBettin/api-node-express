@@ -16,7 +16,7 @@ api.get('/', (req, res)=>{
     res.json({message: "Tudo certo!"})
 })
 
-api.use('/user', logger, userRoute)
+api.use('/user', userRoute)
 
 api.use('/product', productRoute)
 
