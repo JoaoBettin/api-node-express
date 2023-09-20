@@ -1,20 +1,36 @@
 import express from 'express'
-import getProduct from '../controllers/product/getProduct.js'
-import listProducts from '../controllers/product/listProducts.js'
-import createProduct from '../controllers/product/createProduct.js'
-import updateProduct from '../controllers/product/updateProduct.js'
-import deleteProduct from '../controllers/product/deleteProduct.js'
 
 const router = express.Router()
 
-router.get('/', getProduct)
+router.get('/', (req, res)=>{   
+    const users = 
+        {id: 1, name: "PC da Nasa"}
+    res.json(users)
+})
 
-router.get('/list', listProducts)
+router.post('/', (req, res)=>{
+    //Create
+    const dados = req.body
 
-router.post('/', createProduct)
+    res.json({
+        message: "Produto criado com sucesso",
+        dados: dados
+    })
+})
 
-router.put('/', updateProduct)
+router.put('/', (req, res)=>{
+    //Update
+    const dados = req.body
 
-router.delete('/', deleteProduct)
+    res.json({
+        message: "Produto atualizado com sucesso",
+        dados: dados
+    })
+})
+
+router.delete('/', (req, res)=>{
+    //Apagar
+    res.json({message: "Produto apagado com sucesso"})
+})
 
 export default router
